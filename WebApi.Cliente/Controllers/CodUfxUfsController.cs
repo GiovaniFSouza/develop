@@ -24,7 +24,7 @@ namespace WebApi.Cliente.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CodUfxUfs>>> GetCodUfxUfs()
         {
-            return await _context.CodUfxUfs.FromSql("Select Id, nome From CodUfxUf").ToListAsync();
+            return await _context.CodUfxUfs.FromSql("Select Id, nome, sigla From CodUfxUf").ToListAsync();
         }
     }
 }
